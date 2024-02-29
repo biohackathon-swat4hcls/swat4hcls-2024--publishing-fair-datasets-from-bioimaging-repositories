@@ -35,9 +35,28 @@ authors_short: First Author \emph{et al.}
 
 As part of the BioHackathon Europe 2023, we here report...
 
-# Formatting
 
-This document use Markdown and you can look at [this tutorial](https://www.markdowntutorial.com/).
+
+# Bioimaging dataset aggregation projects
+
+Automated processing workflows and Machine Learning make it instructable to combine different datasets from across the different research institutions and consortia. In the ideal world, it would then be possible to make automatic queries across the various research data repositories to pull the required images and the adjacent metadata automatically in one place with minimal manual involvence / correction. Unfortunately, that is not the case because of the variety of reasons.
+
+## Open imaging datasets pain points
+
+### Repository has no automatic uniform access point
+
+In SWAT4HCLS this year, we talked a lot about FAIR Data Points. However, this is not the state of the art as of now. Many imaging datasets in life sciences (IMAGEN, BABRI to name a few) have 
+
+
+
+## Who to blame and what to do
+
+
+
+
+
+
+-
 
 ## Subsection level 2
 
