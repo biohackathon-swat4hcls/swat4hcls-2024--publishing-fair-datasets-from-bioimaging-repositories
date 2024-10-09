@@ -1,158 +1,74 @@
 ---
-title: 'BioHackEU23 report: Template for the very long title'
-title_short: 'BioHackEU23 #26: unknown chemical substances'
+title: 'SWAT4HCLS 2024 report: Publishing FAIR datasets from Bioimaging repositories'
+title_short: 'SWAT4HCLS #7: FAIR Bioimaging repositories publishing'
 tags:
-  - cheminformatics
-  - PubChem
-  - unknown chemical substances
+  - Bioimaging
+  - publishing
+  - FAIR
 authors:
-  - name: First Author
+  - name: Stefan Dvoretskii
     affiliation: 1
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
-    affiliation: 2
+  - name: Philipp Schader
+    orcid: 0000-0002-6075-0757
+    affiliation: 1, 2
+  - name: Marco Nolden
+    orcid: 0000-0001-9629-0564
+    affiliation: 1, 2, 3
+  - name: Josh Moore
+    orcid: 0000-0003-4028-811X
+    affiliation: 4
 affiliations:
-  - name: First Affiliation
+  - name: DKFZ Division of Medical Computing
     index: 1
-  - name: Second Affiliation
+  - name: Helmholtz Metadata Collaboration (HMC) Hub Health, DKFZ, Heidelberg, Germany
     index: 2
-date: 8 November 2023
+  - name: Pattern Analysis and Learning Group, Heidelberg University Hospital
+    index: 3
+  - name: German BioImaging e.V., University of Konstanz, Germany
+    index: 4
+date: 9 October 2024
 cito-bibliography: paper.bib
-event: BH23EU
-biohackathon_name: "BioHackathon Europe 2023"
-biohackathon_url:   "https://biohackathon-europe.org/"
-biohackathon_location: "Barcelona, Spain, 2023"
-group: Project 26
+event: SWAT4HCLS24
+biohackathon_name: "SWAT4HCLS"
+biohackathon_url:   "[https://biohackathon-europe.org/](https://www.swat4ls.org/workshops/leiden2024/hackathon/)"
+biohackathon_location: "Leiden, The Netherlands, 2024"
+group: Group 7
 # URL to project git repo --- should contain the actual paper.md:
-git_url: https://github.com/biohackrxiv/publication-template
+git_url: https://github.com/biohackathon-swat4hcls/swat4hcls-2024--publishing-fair-datasets-from-bioimaging-repositories.git
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
-authors_short: First Author \emph{et al.}
+authors_short: S. Dvoretskii, P. Schader, M. Nolden, J. Moore
 ---
 
 
-# Introduction
+# **Introduction**
 
-As part of the BioHackathon Europe 2023, we here report...
+During the SWAT4HCLS 2024 hackathon, we formed a group of participants from various research initiatives and consortia in Bioimaging and Medical Imaging, like the German Biobanking e.V, the Helmholtz Metadata Collaboration (HMC) Hub Health, the Division of Medical Image Computing at the German Cancer Research Center (DKFZ) and the EU Horizon project CCE\_DART (Data Rich Clinical Trials).
 
+With 2024 being the 10-year anniversary of FAIR data, our discussion quickly came to revolve around the state of FAIR access to Bioimaging data, and ideas how to improve it. Within the research bioimaging community, the Open Microscopy Environment (OME) Consortium has been working to standardize access to large-scale imaging data. The OME consortium is a long-term effort which has produced rich software and standards (\>=2000). Imaging Data Resource (IDR) has appeared as an annotation rich imaging portal in 2016\. As of today, it provides access to 129 Studies with more than 400TB data in more that 14 million images, continuously growing. (\[@usesMethodIn:Williams2017\]). 
 
+The FAIRness of data in IDR, like most other research data repositories, could be further improved. There are other resources that we would like to connect to, including those outside of the bioimaging domain. RDF is the best mechanism for that connection (\[@citesAsPotentialSolution:moore\_2024\_10687659\]). But a catalog is needed to make the produced RDF triples discoverable.
 
-# Bioimaging dataset aggregation projects
+To facilitate multi-centric research on medical imaging data the Kaapana framework (\[@usesMethodIn:scherer2020joint\]) was created. It provides an open-source framework based on cloud native technologies enabling the large-scale analysis of medical imaging data as well as sharing analysis methods across installations. Primary data as well as analysis results can be stored in the platform and metadata for example from DICOM images is extracted to support cross-center definition and curation of imaging patient cohorts.  Multi center data discovery, like in the DART project of Cancer Core Europe (CCE) also requires approaches for managing and sharing catalogs of metadata. .
 
-Automated processing workflows and Machine Learning make it instructable to combine different datasets from across the different research institutions and consortia. In the ideal world, it would then be possible to make automatic queries across the various research data repositories to pull the required images and the adjacent metadata automatically in one place with minimal manual involvence / correction. Unfortunately, that is not the case because of the variety of reasons.
+# **Goals**
 
-## Problems with FAIRness of bioimaging datasets
+During the hackathon, we assessed the implementation of the FAIR principles in the current Bioimaging and Clinical Imaging data repositories. Additionally, to make the RDF export triples from the IDR discoverable, we also explored the  Fair Data Point interface  (\[@citesAsAuthority:da2023fair\]), as an idea to facilitate the exposure of machine-actionable metadata and how it could be added to the Imaging Data Resource (IDR) portal. 
 
-### Tiers of the problems
+# **Results**
 
-In SWAT4HCLS this year, there were a lot of posters about FAIR Data Points (FDP). However, in the reality of "scraping web" for imaging data the FDPs are simply not provided in most of the cases. Some imaging datasets in life sciences (e.g. BABRI `[@citesAsDataSource:yang2021early]` ) have not even a clear way to access the data **manually**, i.e. the data is accessible on paper but in reality the website has been taken down, the corresponding author does not respond or similar.
+To classify the real-world problems with imaging datasets, there was an idea to work on a new “tier” system for publicly available datasets. This tier system would grade the datasets on a scale of their compliance with best data practices. It would complement  existing assessments like the FAIR principles or  the 5-star Open Data system (\[@discusses:Berners-Lee\_2009\]). While the existing tools assess the principal readiness of the data to be FAIR and interlinked, mainly from a technical perspective, the proposed tier system would focus on tangible amount of manual labor that is required to obtain necessary metadata and download public imaging datasets, e.g. finding the right contact person, filling out forms, machine access to metadata or the actual data etc. 
 
-Maybe, the issues can be roughly classified as following tier structure:
-Tier 0: the corresponding author is not reachable and/or the dataset is not exposed on the web 
-Tier 1: the author is reachable, but there are not even a proper metadata file **internally** that describes the dataset well
-Tier 2: there is an exposed metadata which is not/poorly structured and helps not to understand the dataset **manually**
-Tier 3: metadata is machine readable, but the dataset is not accessible in an automatic way (arguably re3data published datasets `[@citesAsDataSource:pampel2013making]`)
-Tier 4: metadata is machine readable, dataset is accessible automatically but not in a really FAIR way
-Tier 5: metadata is machine readable and dataset is FAIRly accessible
+.  We will continue to work on a more precise tier system formulation to indicate typical real-world access problems with  public imaging datasets, and propose ways to improve accessibility.  
+On the technical side, we were successful to gain a working knowledge and fix multiple bugs in the FDP implementation for Imaging Data Resource. We plan to carry on this work at upcoming hackathons, e.g. the [3rd BioHackathon Germany (denbi.de)](https://www.denbi.de/de-nbi-events/1678-biohackathon-germany-3).
 
-In following, I extend on the proposed main pitfalls of some tiers.
+### **Cultural change, community building and tool development**
 
-### Tier 0: dataset is not published
+We agreed the road to a FAIR data space in the bioimaging community poses challenges on very different levels. Some are community or domain specific, others are more general. Within the Helmholtz Association, the Helmholtz Metadata Collaboration is a platform of the Incubator for Information and Data Science aims at supporting infrastructures and researchers on their way to implementing a FAIR data space by providing guidance and tools,
 
-That's it. We might know there are some big amounts of data which could help to save lives, improve diagnosis and provide other helpful function to the imaging / clinical community, but they are just not accessible, and the data about them is false or inaccessible.
+Furthermore, the hackathon working group was composed of individuals both from the Open Microscopy Environment (OME) and Digital Imaging and Communications in Medicine (DICOM) domains. This meeting of cross research and medical communities proved fruitful in addressing cross-sectional problems, and the continuation of this collaboration could lead to a cultural change.
 
-### Tier 1: FAIR metadata is not supplied
+# **Funding**
 
-Apparently, the topics like data provenance, data quality and data interpretability are not important enough on that tier that at least a human-readable description of the dataset in one place is added. Metadata is scattered across the publication, the website, the supplementary publication information and takes a really hard effort to find. For example, an analysed dataset (`[@citesAsDataSource:nymberg2013analytical]`) took around a 5 human-hours effort to scrape manually the documentation, the original paper and the website for the _number of unique 3D volumes of MRI images_ in the study. The next part was contacting the dataset owners directly. They were helpful, but only provided the _estimate_ of the number of images in the dataset.
-This approach clearly does not scale well and is nothing for Big Data analysis.
+CCE\_DART has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 965397
 
-### Tier 3-4: Endless manual request and licensing issues
-
-The data is there, but in order to access it we have to face gigantic bureaucratic hurdles. Nowadays it means filling 3-4 page paper documents for access and license agreements (`[@citesAsAuthority:DataUsag94-online]`), facing days-long e-mail conversations with responsible digitization officers about analysis specifics (especially if it is in a protected research environment), all of which is severely affecting working hours spent to fetch the datasets as well as push the deadlines of the potential data project back significantly.
-
-### Tier 3-4: Access points are not FAIR
-
-It's great if sometimes with significant manual effort one gains the access to the dataset. Next step? Copy-paste the login credentials. Find out how to install the NBIA data retriever (`[@citesAsAuthority:NBIAData67-online]`). Fetch the metadata in the table with differences in structure for each of the TCIA published datasets! There are so many wonderful concepts in Semantic Web like triple stores, FDPs et cetera, but let's face the reality: even "big players" like TCIA do not employ these services as of now. 
-
-## Who to blame and what to do
-
-
-
-
-
-
--
-
-## Subsection level 2
-
-Please keep sections to a maximum of only two levels.
-
-## Tables and figures
-
-Tables can be added in the following way, though alternatives are possible:
-
-Table: Note that table caption is automatically numbered and should be
-given before the table itself.
-
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-
-A figure is added with:
-
-![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
-
-# Other main section on your manuscript level 1
-
-Lists can be added with:
-
-1. Item 1
-2. Item 2
-
-# Citation Typing Ontology annotation
-
-You can use [CiTO](http://purl.org/spar/cito/2018-02-12) annotations, as explained in [this BioHackathon Europe 2021 write up](https://raw.githubusercontent.com/biohackrxiv/bhxiv-metadata/main/doc/elixir_biohackathon2021/paper.md) and [this CiTO Pilot](https://www.biomedcentral.com/collections/cito).
-Using this template, you can cite an article and indicate _why_ you cite that article, for instance DisGeNET-RDF [@citesAsAuthority:Queralt2016].
-
-The syntax in Markdown is as follows: a single intention annotation looks like
-`[@usesMethodIn:Krewinkel2017]`; two or more intentions are separated
-with colons, like `[@extends:discusses:Nielsen2017Scholia]`. When you cite two
-different articles, you use this syntax: `[@citesAsDataSource:Ammar2022ETL; @citesAsDataSource:Arend2022BioHackEU22]`.
-
-Possible CiTO typing annotation include:
-
-* citesAsDataSource: when you point the reader to a source of data which may explain a claim
-* usesDataFrom: when you reuse somehow (and elaborate on) the data in the cited entity
-* usesMethodIn
-* citesAsAuthority
-* citesAsEvidence
-* citesAsPotentialSolution
-* citesAsRecommendedReading
-* citesAsRelated
-* citesAsSourceDocument
-* citesForInformation
-* confirms
-* documents
-* providesDataFor
-* obtainsSupportFrom
-* discusses
-* extends
-* agreesWith
-* disagreesWith
-* updates
-* citation: generic citation
-
-
-# Results
-
-
-# Discussion
-
-...
-
-## Acknowledgements
-
-...
-
-## References
