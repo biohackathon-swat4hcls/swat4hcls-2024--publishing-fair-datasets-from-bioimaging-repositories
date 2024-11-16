@@ -16,7 +16,7 @@ authors:
     affiliation: 1, 2, 3
   - name: Josh Moore
     orcid: 0000-0003-4028-811X
-    affiliation: 4, 5
+    affiliation: 4, 5, 6
 affiliations:
   - name: DKFZ Division of Medical Computing
     index: 1
@@ -28,6 +28,8 @@ affiliations:
     index: 4
   - name: National Research Data Infrastructure for Microscopy and BioImage Analysis (NFDI4BIOIMAGE)
     index: 5
+  - name: Open Microscopy Environment (OME)
+    index: 6
 date: 9 October 2024
 cito-bibliography: paper.bib
 event: SWAT4HCLS24
