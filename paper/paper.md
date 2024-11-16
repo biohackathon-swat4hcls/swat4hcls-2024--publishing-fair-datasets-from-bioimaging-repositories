@@ -62,10 +62,10 @@ to large-scale imaging data. The OME consortium is a long-term effort which has
 produced rich software and standards (\>=2000). Imaging Data Resource (IDR) has
 appeared as an annotation rich imaging portal in 2016\. As of today, it
 provides access to 130 Studies with more than 400TB data in more that 14
-million images, continuously growing. ([@usesMethodIn:Williams2017]). 
+million images, continuously growing. [@usesMethodIn:Williams2017]. 
 
 Similarly, to facilitate multi-centric research on medical imaging data the
-Kaapana framework ([@usesMethodIn:scherer2020joint]) was created. It provides
+Kaapana framework [@usesMethodIn:scherer2020joint] was created. It provides
 an open-source framework based on cloud native technologies enabling the
 large-scale analysis of medical imaging data as well as sharing analysis
 methods across installations. Primary data as well as analysis results can be
@@ -79,7 +79,7 @@ research repositories like the IDR could be further improved. A common,
 harmonized representation of the metadata is needed, both for discovery as well
 as linking to other resources outside the imaging domain. We propose RDF is the
 best mechanism for that connection
-([@citesAsPotentialSolution:moore_2024_10687659]), but a catalog is needed to
+[@citesAsPotentialSolution:moore_2024_10687659], but a catalog is needed to
 make the produced RDF triples discoverable.
 
 
@@ -88,7 +88,7 @@ make the produced RDF triples discoverable.
 During the hackathon, we assessed the implementation of the FAIR principles in
 the current bioimaging and clinical imaging data repositories. Additionally, to
 make the RDF export triples from the IDR discoverable, we also explored the
-Fair Data Point interface ([@citesAsAuthority:da2023fair]), as a mechanism to
+Fair Data Point interface [@citesAsAuthority:da2023fair], as a mechanism to
 facilitate the exposure of machine-actionable metadata and how it could be
 added to the Imaging Data Resource (IDR) portal. 
 
@@ -99,7 +99,7 @@ To classify the real-world problems with imaging datasets, we formulated a new
 “tier” system for publicly available datasets. This tier system grades datasets
 on a scale of their compliance with best data practices. It complements
 existing assessments like the FAIR principles or the 5-star Open Data system
-([@discusses:Berners-Lee_2009]). While existing tools assess the principal
+[@discusses:Berners-Lee_2009]. While existing tools assess the principal
 readiness of the data to be FAIR and interlinked, mainly from a technical
 perspective, the proposed tier system focuses on tangible amount of manual
 labor that is required to obtain necessary metadata and download public imaging
