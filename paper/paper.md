@@ -16,7 +16,7 @@ authors:
     affiliation: 1, 2, 3
   - name: Josh Moore
     orcid: 0000-0003-4028-811X
-    affiliation: 4
+    affiliation: 4, 5
 affiliations:
   - name: DKFZ Division of Medical Computing
     index: 1
@@ -26,6 +26,8 @@ affiliations:
     index: 3
   - name: German BioImaging e.V., University of Konstanz, Germany
     index: 4
+  - name: National Research Data Infrastructure for Microscopy and BioImage Analysis (NFDI4BIOIMAGE)
+    index: 5
 date: 9 October 2024
 cito-bibliography: paper.bib
 event: SWAT4HCLS24
@@ -70,5 +72,7 @@ Furthermore, the hackathon working group was composed of individuals both from t
 
 # **Funding**
 
-CCE\_DART has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 965397
+**CCE\_DART** has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 965397.
+**NFDI4BIOIMAGE** is funded by DFG grant number NFDI 46/1, project number 501864659.
 
+# **References**
