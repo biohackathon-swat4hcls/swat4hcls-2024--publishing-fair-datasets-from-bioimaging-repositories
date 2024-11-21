@@ -64,7 +64,7 @@ appeared as an annotation rich imaging portal in 2016\. As of today, it
 provides access to 130 Studies with more than 400TB data in more that 14
 million images, continuously growing. [@usesMethodIn:Williams2017]. 
 
-The Medical Image Computing (MIC) Division at the German Cancer Research Center (DKFZ) was officially formed in 2011. It appeared out of earlier DKFZ efforts in computational image analysis and radiological data interpretation to advance the development and application of machine learning and deep learning methods for medical imaging, primarily targeting cancer research and treatment optimization​. Helmholtz Metadata Collaboration (HMC) Hub Health develops concepts and technologies for metadata management in health research. HMC is a part of Helmholtz Incubator think tank started 2016.
+The division of Medical Image Computing (MIC) was founded in 2017, pioneering work in the area of data science and artificial intelligence (AI) with a strong focus on applications in the health and specifically cancer sector. The strong focus on translational research is represented in numerous collaborations with clinical scientists and hospitals, whilst transfer activities within the research community are indicated by the involvement in several national and international research platforms and network initiatives. Among these is a Helmholtz Incubator initiative Helmholtz Metadata Collaboration (HMC) Hub Health, which develops concepts and technologies for metadata management in health research.
 To facilitate multi-centric research on medical imaging data, the
 Kaapana framework [@usesMethodIn:scherer2020joint] was created in MIC. It provides
 an open-source framework based on cloud native technologies enabling the
