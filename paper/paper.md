@@ -55,25 +55,26 @@ the Division of Medical Image Computing at the German Cancer Research Center
 (DKFZ) and the EU Horizon project CCE\_DART (Data Rich Clinical Trials), came
 together.
 
-With 2024 being the 10-year anniversary of FAIR data, our discussion quickly
-came to revolve around the state of FAIR access to bioimaging data, and ideas
+Our discussion quickly came to revolve around the state of FAIR access to bioimaging data, and ideas
 how to improve it. Within the research bioimaging community, the Open
-Microscopy Environment (OME) Consortium has been working to standardize access
+Microscopy Environment (OME) Consortium [@citesAsAuthority:swedlow2003informatics] has been working to standardize access
 to large-scale imaging data. The OME consortium is a long-term effort which has
-produced rich software and standards (\>=2000). Imaging Data Resource (IDR) has
+produced rich software and standards. Imaging Data Resource (IDR) has
 appeared as an annotation rich imaging portal in 2016\. As of today, it
 provides access to 130 Studies with more than 400TB data in more that 14
 million images, continuously growing. [@usesMethodIn:Williams2017]. 
 
-Similarly, to facilitate multi-centric research on medical imaging data the
-Kaapana framework [@usesMethodIn:scherer2020joint] was created. It provides
+The Medical Image Computing (MIC) Division at the German Cancer Research Center (DKFZ) was officially formed in 2011. It appeared out of earlier DKFZ efforts in computational image analysis and radiological data interpretation to advance the development and application of machine learning and deep learning methods for medical imaging, primarily targeting cancer research and treatment optimization​. Helmholtz Metadata Collaboration (HMC) Hub Health develops concepts and technologies for metadata management in health research. HMC is a part of Helmholtz Incubator think tank started 2016.
+To facilitate multi-centric research on medical imaging data, the
+Kaapana framework [@usesMethodIn:scherer2020joint] was created in MIC. It provides
 an open-source framework based on cloud native technologies enabling the
 large-scale analysis of medical imaging data as well as sharing analysis
 methods across installations. Primary data as well as analysis results can be
 stored in the platform and metadata for example from DICOM images is extracted
 to support cross-center definition and curation of imaging patient cohorts.
 Multi center data discovery, like in the DART project of Cancer Core Europe
-(CCE) also requires approaches for managing and sharing catalogs of metadata. .
+(CCE) also requires approaches for managing and sharing catalogs of metadata. In this, HMC supports the efforts to structure, standardize, and expand the collection and 
+deposition of metadata in the health sector to increase the reproducibility, comparability, and transparency of data.
 
 Though much data is available, to optimize re-use the FAIRness of data in
 research repositories like the IDR could be further improved. A common,
@@ -105,7 +106,7 @@ readiness of the data to be FAIR and interlinked, mainly from a technical
 perspective, the proposed tier system focuses on tangible amount of manual
 labor that is required to obtain necessary metadata and download public imaging
 datasets, e.g. finding the right contact person, filling out forms, machine
-access to metadata or the actual data etc.
+access to metadata or the actual data etc. [@citesAsAuthority:dvoretskii_2024_11503289] [@citesAsAuthority:dvoretskii_2024_14041301] 
 
 We will continue to work on a more precise tier system formulation to indicate
 typical real-world access problems with public imaging datasets, and propose
