@@ -7,6 +7,7 @@ tags:
   - FAIR
 authors:
   - name: Stefan Dvoretskii
+    orcid: 0000-0001-7769-0167
     affiliation: 1
   - name: Philipp Schader
     orcid: 0000-0002-6075-0757
